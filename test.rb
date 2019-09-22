@@ -33,10 +33,14 @@ def test_creating_arrays
   puts array.unshift(:last)
   #assert_equal __, empty_array.size
 end
-test_creating_arrays
+
 def hashtest
-  h = { :one => "uno" }
-  puts h.fetch(:doesnt)
+  #h = { :one => "uno" }
+  hash = Hash.new([])
+
+  hash[:one] << "uno"
+  hash[:two] << "dos"
+  puts hash[:two]
 end
 
 hashtest
