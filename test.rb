@@ -1,6 +1,5 @@
 #!/bin/ruby
-def test_you_dont_get_null_pointer_errors_when_calling_methods_on_nil
-  # What happens when you call a method that doesn't exist.  The
+def test_you_dont_get_null_pointer_errors_when_calling_methods_on_nil # What happens when you call a method that doesn't exist.  The
   # following begin/rescue/end code block captures the exception and
   # makes some assertions about it.
   begin
@@ -35,3 +34,9 @@ def test_creating_arrays
   #assert_equal __, empty_array.size
 end
 test_creating_arrays
+def hashtest
+  h = { :one => "uno" }
+  puts h.fetch(:doesnt)
+end
+
+hashtest
