@@ -33,7 +33,9 @@ def score(dice)
   points = 0
   dhash = {}
   dice.each do |roll|
-    dhash[roll] = (dice.select { |d| roll == d }).count
+    if !dhash.key?(roll)
+      dhash[roll] = (dice.select { |d| roll == d }).count
+    end
   end
   dhash.each do |k,v|
     case k
